@@ -6,14 +6,172 @@
 
   <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
-
+  <link rel="stylesheet/less" type="text/css" href="./less/index.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
-  <h1>My Resume</h1>
+<body class="container">
+  <header>
+    <div class="navbar">
+      <div class="name">Huey Freeman</div>
+      <nav class="nav">
+        <a class="page-scroll" href="#home">HOME</a>
+        <a class="page-scroll" href="#portfolio">PORTFOLIO</a>
+        <a class="page-scroll" href="#about">ABOUT</a>
+        <a class="page-scroll" href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+  <div class="card">
+          <section id="intro" class="intro-section">
+            <div class="container page-scroll">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h1>Huey Freeman</h1>
+                  <img src="data:image/jpeg;base64,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" alt="Taken from Google" class="img-flat"></img>
+                  <p>Huey Freeman is one of the main protagonists and hero in The Boondocks syndicated 
+                    comic strip written by Aaron McGruder, as well as the animated TV series of the same name</p>
+                  </br>
+                  <p>
+                    <a href="https://en.wikipedia.org/wiki/Huey_Freeman">
+                      <button class="pbutton">
+                        Facebook
+                      </button>
+                      </a>
+                    <a href="https://www.google.com/search?sa=X&biw=1366&bih=625&q=The+Boondocks&stick=H4sIAAAAAAAAAOPgE-LSz9U3MDKryDbLUeIEsc0zCsqMtWSyk630S8qAKD45I7EoMbkktciqpEyhOCO_vHgRK29IRqqCU35-Xkp-cnYxACKzMIRHAAAA&ved=2ahUKEwjlkru8tYLkAhVEExoKHRABCDgQmxMoATAqegQIDBAZ">
+                        <button class="pbutton">
+                          Wikipedia
+                        </button>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </section>
+            <div>
+                
+                <section id="portfolio" class="port articles container page-scroll">
+                    <div class="sidehead"><h1>PORTFOLIO</h1></div>
+                    
+                    <div class="cardx">
+                    <article>
+                      <img src="http://www.gstatic.com/tv/thumb/v22episodes/10810364/p10810364_e_v8_aa.jpg" alt="">
+                      <h2>Stink
+                        </h2>
+                      <p>The clone of Stinkmeaner arrives, becoming a celebrity after a video of his fight with Granddad goes viral.</p>
+                    </article>
+                    <article>
+                        <img src="http://www.gstatic.com/tv/thumb/v22episodes/10751812/p10751812_e_v8_aa.jpg" alt="">
+                        <h2>Free</h2>
+                        <p>A young Granddad is held as an unwilling freedom rider on a trip through the racist South.</p>
+                      </article>
+                      <article>
+                          <img src="http://www.gstatic.com/tv/thumb/v22episodes/10751813/p10751813_e_v8_aa.jpg" alt="">
+                          <h2>Grand</h2>
+                          <p>Granddad begins dating a long-lost Kardashian sister and winds up on a reality show.</p>
+                        </article>
+                      </div>
+                </section>
+               
+            </div>
+          
+
+          <section id="about" class="about-section">
+              <div class="page-scroll">
+                <div class="about1">
+                  <div class="col-lg-12">
+                    <h2>About me</h2>
+                    <hr>
+                  </div>
+                </div>
+
+                <div class="about2">
+                  <div class="col-lg-4">
+                    <div class="pull-left">
+                      <i class="fa fa-code fa-pull-left">
+                      </i>
+                    </div>
+                    <div class="media-body">
+                    <h3>Coding</h3>
+                      <ul>
+                        <li>Experience in Java</li>
+                        <li>Working with Python Web Frameworks</li>
+                        <li>HTML & CSS</li>
+                        <li>Node.js, React and PostgreSQL</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="pull-left">
+                      <i class="fa fa-bullhorn">
+                      </i>
+                    </div>
+                    <div class="media-body">
+                      <h3>Languages</h3>
+                      <ul>
+                        <li>Native English Speaker</li>
+                        <li>B1-B2 German Speaker</li>
+                        <li>B1 Hungarian Speaker (primary focus)</li>
+                        <li>A2 French Speaker</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="pull-left">
+                      <i class="fa fa-user">
+                      </i>
+                    </div>
+                    <div class="media-body">
+                      <h3>Personal</h3>
+                      <ul>
+                        <li>Keen cyclist and runner</li>
+                        <li>At the University of Western Australia</li>
+                        <li>Studying Computer Science</li>
+                        <li>Completed Bachelor Of Arts</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <div class="lastrow">
+              <div class="form" id="contact">
+                  <form>
+                    <div>
+                    <label class="topic" for="fname">First Name:</label>
+                    <input class="topic" type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                    <div>
+                    <label class="topic" for="lname">Last Name:</label>
+                    <input class="topic" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                    <div>
+                    <label class="topic" for="subject">Subject:</label>
+                    </div>
+                    <div>
+                    <textarea class="topic" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                    <div>
+                    <input class="formbutton" type="submit" value="Submit">
+                    </div>
+
+                    
+                  </form>
+                </div>
+                
+                <div class="form2" id="contact">
+                    <ul>
+                      <li>Phone: +187-278-373-389</li>
+                      <li>E-mail: support@huey.com</li>
+                      <li>website: www.huey.com</li>
+                      <li>twitter: @huey</li>
+                    </ul>
+                  </div>
+                </div>
+        </div>
+  <script src="index.js"></script>
 </body>
 </html>

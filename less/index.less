@@ -57,3 +57,336 @@ html, body {
     height: 100%;
 }
 
+
+
+#bundle() {
+	.animate {
+		color: #4AB582;
+		transition: 0.2s ease-in-out;
+		font-size: 1.7em;
+	}
+	.flexcolumn {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+// breakpoints
+@mobileBreakPoint: 550px;
+@defaultFont: 1rem;
+
+.container {
+	#bundle.flexcolumn();
+	width: 99%;
+	align-self: center;
+	align-content: center;
+
+	.row {
+		margin-bottom: 1%;
+		
+	}
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		justify-items: center;
+    	padding: 0 35px;
+    	top: 0px;
+    	width: 100%;
+		justify-content: space-between;
+		background-color: black;
+		height: 45px;
+		@media(max-width: @mobileBreakPoint) {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			align-items: center;
+			width: 100%;
+			height: 20rem;
+		  }
+	}
+	.name{
+		#bundle.flexcolumn();
+		align-items: center;
+		font-size: 2em;
+		width: 30%;
+		color: #4AB582;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+	}
+	a {
+		text-decoration: none;
+		color: gray;
+		font-size: 1.5em;
+		&:hover{
+			#bundle.animate();
+		}
+	}
+	.nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		align-self: center;
+		width: 50rem;
+		padding-right: 5rem;
+		@media(max-width: @mobileBreakPoint) {
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+		}
+
+	.img-flat{
+		border-radius: 20px;
+		}
+	
+	
+	section {
+		padding: 40px 0;
+		display: flex;
+		color: white;
+		text-align: center;
+		h1,
+		h2 {
+		  margin: 0;
+		  font-weight: 700;
+		  font-size: 4.5rem;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		}
+		
+	  }
+	  .port{
+		  display: flex;
+		  flex-direction: row;
+		  background-color: lightblue;
+		  width: 100%;
+	  }
+	  .intro-section {
+		#bundle.flexcolumn();
+		background-color: #4AB582;
+	  }
+	  
+	  .cardx {
+		display: flex;
+		flex-direction: row;
+		background-color: lightblue;
+		width: 100%;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+	  }
+	  article {
+		#bundle.flexcolumn();
+		background: #eee;
+		box-sizing: border-box;
+		margin: @defaultFont;
+		width: 50%;
+		height: 32rem;
+		margin-left: 10px;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 60%;
+		  }
+		
+		h2, p {
+		  padding: 0.5rem @defaultFont;
+		  margin: 0;
+		  color: darkslategray;
+		}
+		img { width: 100%; }
+		h2 { 
+			font-size: 30px; 
+			&:hover{
+				#bundle.animate();
+				}
+		}
+	  }
+
+	.articles {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		align-self: center;
+		padding: 5%;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+		.sidehead {
+			#bundle.flexcolumn();
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+			height: 70%;
+			width: 40%;
+		}
+	}
+
+	.pbutton {
+		margin-top: @defaultFont;
+	    background-color: #4AB582;
+  		color: white;
+		border: 2px solid white; /* Green */
+		border-radius: 10px;
+		width: 6rem;
+		height: 3rem;
+		&:hover {
+			background-color: lightblue;
+		}
+	  }
+
+	.about-section {
+		background-color: burlywood;
+	  }
+	  
+	  .about-section i.fa {
+		  height: 75px;
+		  width: 75px;
+		  line-height: 70px;
+		  text-align: center;
+		  border: 3px solid #333;
+		  border-radius: 100%;
+	  }
+	  
+	  .about-section .media-body {
+		padding-left: 25px;
+	  }
+	  
+	  .about-section .media-body ul{
+		display: inline;
+		padding-bottom: 10px;
+	  }
+	  hr {
+		border: 2px solid;
+		width: 5%;
+	  }
+	  .about-section {
+		#bundle.flexcolumn();
+		align-self: center;
+		background-color: #333;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+		.about1 {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			width: 100%;
+		}
+		.about2 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			align-content: center;
+			align-self: center;
+			width: 100%;
+			margin-bottom: 3%;
+			padding: 2%;
+			font-size: 1.7rem;
+			
+				@media(max-width: @mobileBreakPoint) {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					justify-items: center;
+					width: 100%;
+				  }
+			
+		}
+		
+		
+		  }
+	.lastrow {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+	.form {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			margin: 10px;
+			width: 30%;
+			resize: vertical;
+ 		 	box-sizing: border-box;
+  			margin-top: 6px;
+  			margin-bottom: 16px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		.topic {margin: 6px;}
+		.formbutton {
+			background-color: #4CAF50;
+  			color: white;
+  			padding: 12px 20px;
+  			border: none;
+  			border-radius: 4px;
+		}
+		textarea{
+			width: 100%;
+		}
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-items: center;
+			width: 100%;
+		  }
+	}
+
+	.form2 {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-self: center;
+		margin: 10px;
+		width: 70%;
+		resize: vertical;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		border-radius: 5px;
+		padding: 20px;
+		font-size: 3rem;
+		@media(max-width: @mobileBreakPoint) {
+			display: flex;
+			width: 100%;
+		  }
+			}
+		}			
+	}
